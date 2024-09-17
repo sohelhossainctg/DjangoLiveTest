@@ -1,0 +1,28 @@
+
+{% extends "base.html" %}
+{% block content %}
+
+<h3 style="color: blue;"><b>Contacts List. (Total No Contacts: {{ total_contacts }}) </b></h3>
+<div class="row">
+  {% for contact in data %}
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title"><strong>{{ forloop.counter }}. {{ contact.first_name }}</strong>
+        </h4>
+        <h5 class="card-title"> {{ contact.email_address }} (Index: {{ contact.phone_number }})
+        </h5>
+        <a href="{% url 'view_profile' contact.id %}" class="btn btn-primary">View
+          Profile</a>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+
+{% endblock content %}
+
+
+
+
+

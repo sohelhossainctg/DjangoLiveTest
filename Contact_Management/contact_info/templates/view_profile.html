@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block content %}
+{% load static %}
+
+
+<h1 style="color: blue;">Profile of {{ data.first_name }} </h1>
+
+
+<div class="card">
+  <div class="card-body">
+    <p><strong>Name: </strong>{{ data.first_name }} {{ data.last_name }}</p>
+    <p><strong>Email Address: </strong>{{ data.email_address }}</p>
+    <p><strong>Phone Number: </strong>{{ data.phone_number }}</p>
+    <p><strong>Address: </strong>{{ data.address }}</p>
+  </div>
+</div>
+
+
+
+{% endblock content %}
